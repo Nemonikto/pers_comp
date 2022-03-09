@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseNotFound, HttpResponse
 
 menu = [{'title': "О сайте", 'url_name':'about'},
-        {'title': "Пройти тест", 'url_name':'test'},]
+        {'title': "Подобрать компьютер", 'url_name':'test'},]
 
 
 def about(request):
@@ -10,7 +10,7 @@ def about(request):
 
 
 def test_page(request):
-    return render(request, 'compapp/index.html', {'menu': menu, 'title': 'Тест'})
+    return render(request, 'compapp/index.html', {'menu': menu, 'title': 'Подобрать компьютер'})
 
 
 def page_not_found(request, exception):
